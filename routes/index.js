@@ -1,4 +1,4 @@
-import itemSchema from '../models/items';
+import itemSchema from '../models';
 import { API_PREFIX } from '../config';
 
 export default router => {
