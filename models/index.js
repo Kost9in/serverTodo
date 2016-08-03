@@ -4,4 +4,4 @@ import userModel from './users';
 export {
   itemModel,
   userModel
-}; 
+};
