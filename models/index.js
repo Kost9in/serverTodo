@@ -1,9 +1,7 @@
-import mongoose from 'mongoose';
+import itemModel from './items';
+import userModel from './users';
 
-const itemSchema = new mongoose.Schema({
-  id: { type: mongoose.Schema.Types.ObjectId },
-  title: { type: String, required: true },
-  time: { type: Date }
-});
-
-export default mongoose.model('item', itemSchema);
+export {
+  itemModel,
+  userModel
+}; 
