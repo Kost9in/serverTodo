@@ -1,4 +1,5 @@
 import Koa from 'koa';
+import cors from 'kcors';
 import koaRouter from 'koa-router';
 import koaLogger from 'koa-logger';
 import koaParser from 'koa-bodyparser';
@@ -16,6 +17,7 @@ const router = routes(koaRouter());
 const app = new Koa();
 
 app
+  .use(cors())
   .use(koaLogger())
   .use(koaParser())
   .use(jwt({ secret: JWT_SECRET_STRING }).unless({ path: [`${API_PREFIX}/auth/login`] }))
